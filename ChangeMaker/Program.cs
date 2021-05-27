@@ -16,11 +16,27 @@ namespace ChangeMaker
         }
         public static void GetChange()
         {
-            Console.WriteLine("Please enter a dollar amount to receive efficient change: ");
-            double dollarAmount = Convert.ToDouble(Console.ReadLine());
-            
+            bool isPossible = true;
+            bool tryAgain = true;
 
-            
+
+            while (tryAgain)
+            {
+
+
+                while (isPossible)
+                {
+                    Console.WriteLine("Please enter a dollar amount to receive efficient change: ");
+                    double dollarAmount = Convert.ToDouble(Console.ReadLine());
+
+
+                }
+                Console.WriteLine("Would you like to try again? Y/N: ");
+
+
+
+            }
+
         }
     }
 }
