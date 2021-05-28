@@ -27,7 +27,7 @@ namespace ChangeMaker
                     Console.WriteLine("Please enter a dollar amount to receive efficient change: ");
                     double dollarAmount = Convert.ToDouble(Console.ReadLine());
 
-                    if (dollarAmount < .1 || dollarAmount == 0)
+                    if (dollarAmount < .01 || dollarAmount == 0)
                     {
                         Console.WriteLine("I am sorry, that is an invalid Selection");
                         isPossible = false;
