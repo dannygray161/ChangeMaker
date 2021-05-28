@@ -24,23 +24,26 @@ namespace ChangeMaker
 
                 while (isPossible)
                 {
-                    Console.WriteLine("Please enter a dollar amount to receive efficient change: ");
-                    double dollarAmount = Convert.ToDouble(Console.ReadLine());
+                    try
+                    {
+                        Console.WriteLine("Please enter a dollar amount to receive efficient change: ");
+                        double dollarAmount = Convert.ToDouble(Console.ReadLine());
 
-                    if (dollarAmount < .01 || dollarAmount == 0)
-                    {
-                        Console.WriteLine("I am sorry, that is an invalid Selection");
-                        isPossible = false;
-                    }
-                    else if (dollarAmount.ToString().Contains(" "))
-                    {
-                        Console.WriteLine("I am sorry, that is an invalid Selection");
-                        isPossible = false;
-                    }
-                    else
-                    {
+                        if (dollarAmount < .01 || dollarAmount == 0)
+                        {
+                            Console.WriteLine("I am sorry, that is an invalid Selection");
+                            isPossible = false;
+                        }
+                        else
+                        {
 
-                        GetChange(dollarAmount);
+                            GetChange(dollarAmount);
+                            isPossible = false;
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("I am sorry, there has been an error. Either an incorrect choice, or not a valid dollar amount. ");
                         isPossible = false;
                     }
 
